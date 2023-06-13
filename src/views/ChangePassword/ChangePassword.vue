@@ -14,7 +14,7 @@
           <label
             for="old-password"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Password</label
+            >Old Password</label
           >
           <div class="flex">
             <div class="relative w-full">
@@ -70,7 +70,7 @@
         </div>
         <div>
           <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Password</label
+            >New Password</label
           >
           <div class="flex">
             <div class="relative w-full">
@@ -128,7 +128,7 @@
           <label
             for="confrim-password"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Confirm Password</label
+            >Confirm New Password</label
           >
           <div class="flex">
             <div class="relative w-full">
