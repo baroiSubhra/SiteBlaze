@@ -23,7 +23,7 @@
         </p>
       </div>
       <img
-        class="w-full bx-shadow rounded"
+        class="w-full bx-shadow rounded dark:shadow-white"
         src="@/assets/images/cms.png"
         alt="dashboard image"
       />

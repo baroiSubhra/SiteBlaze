@@ -1,5 +1,5 @@
 <template>
-  <section class="center template-section" id="project">
+  <section class="center template-section" id="project" v-if="data.show">
     <div class="about">
       <div class="about-top">
         <div>
@@ -19,6 +19,7 @@
           <AboutUsCards
             v-for="index in 3"
             :key="index"
+            :img="defaultProjectImages"
             :docId="`${index}`"
             :title="`This is Project no -${index}`"
             details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatP"
@@ -26,7 +27,7 @@
         </template>
         <template v-else>
           <template v-if="loading">
-            <Spinner />
+            <Spinner class="col-start-2" />
           </template>
           <template v-else>
             <AboutUsCards
@@ -40,18 +41,20 @@
           </template>
         </template>
       </div>
-      <div class="mt-4 center">
-        <Button @click="showBlogsView" :label="data.ctaButton.value" />
+      <div class="mt-4 center" v-if="postData.length > 0">
+        <Button @click="showProjectsView" :label="data.ctaButton.value" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { getBlogs } from '@/api/apis'
+import template1DefaultImage from '@/assets/images/restaurant.png'
+import { getProjects } from '@/api/apis'
 import AboutUsCards from '../components/Cards.vue'
 import Button from '../components/Button.vue'
 import Spinner from '../../../components/Spinner.vue'
+import { STATUS_ENUM } from '@/utils/constants'
 export default {
   components: {
     AboutUsCards,
@@ -70,16 +73,17 @@ export default {
       isTemplate: this.$route.meta.isTemplate,
       postData: [],
       pageNo: 1,
-      pageLimit: 3
+      pageLimit: 3,
+      defaultProjectImages: template1DefaultImage
     }
   },
   methods: {
-    showBlogsView() {
-      this.$router.push(this.$route.fullPath + '/blogs')
+    showProjectsView() {
+      this.$router.push(this.$route.fullPath + '/projects')
     },
     async fetchData() {
       this.loading = true
-      let resp = await getBlogs('', this.pageNo, this.pageLimit)
+      let resp = await getProjects(STATUS_ENUM.ONLINE, this.pageNo, this.pageLimit)
       if (resp.success) {
         this.postData = resp.data.documents
       }

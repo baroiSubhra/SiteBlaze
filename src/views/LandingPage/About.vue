@@ -18,12 +18,12 @@
           engage your visitors with your blogs and projects using the cms.
         </p>
         <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-          Don't settle for ordinary – create extraordinary websites with SiteBlaze. Sign up now and
+          Don't settle for ordinary - create extraordinary websites with SiteBlaze. Sign up now and
           unleash your digital potential!
         </p>
       </div>
       <img
-        class="w-full bx-shadow rounded"
+        class="w-full bx-shadow rounded dark:shadow-white"
         src="@/assets/images/about.png"
         alt="dashboard image"
       />

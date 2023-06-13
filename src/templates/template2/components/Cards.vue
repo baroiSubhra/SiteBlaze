@@ -1,8 +1,8 @@
 <template>
   <div class="about-us-card">
     <div>
-      <img v-if="cardType == 'blog'" :src="img" alt="" />
-      <img v-else :src="img" alt="" />
+      <img v-if="cardType == 'blog'" :src="getImageLink()" alt="" />
+      <img v-else :src="getImageLink()" alt="" />
     </div>
     <h3 class="mb-4 pt-2">{{ title }}</h3>
     <h5 class="mb-4 color-secondary">
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import templateImage from '@/assets/images/meetup-1.jpg'
+import defaultImage from '@/assets/images/card.jpg'
 export default {
   props: {
     cardType: {
@@ -26,7 +26,7 @@ export default {
     },
     img: {
       type: String,
-      default: templateImage
+      default: defaultImage
     },
     title: {
       type: String,
@@ -44,17 +44,21 @@ export default {
   },
   data() {
     return {
-      templateImage: templateImage
+      defaultImage: defaultImage
     }
   },
   methods: {
     goToIndividualPost() {
       const noOfPopsToBasePath = this.$route.meta.noOfPopsToBasePath
+      const routeTo = this.cardType && this.cardType == 'blog' ? '/blogs' : '/projects'
       const finalRoute =
         noOfPopsToBasePath == 0
-          ? this.$route.path + '/blogs/' + this.docId
+          ? this.$route.path + routeTo + '/' + this.docId
           : this.$route.path + '/' + this.docId
       this.$router.push(finalRoute)
+    },
+    getImageLink() {
+      return this.img && this.img.length > 0 ? this.img : this.defaultImage
     }
   }
 }

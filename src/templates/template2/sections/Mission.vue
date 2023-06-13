@@ -1,5 +1,5 @@
 <template>
-  <section class="center template-section" id="mission">
+  <section class="center template-section" id="mission" v-if="data.show">
     <div class="home">
       <div class="home-left">
         <h4 class="color-primary mb-4" v-if="data.topHeading.show">{{ data.topHeading.value }}</h4>

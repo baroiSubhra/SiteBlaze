@@ -2,8 +2,13 @@
   <div
     class="flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
   >
-    <a class="flex-1">
-      <img class="rounded-t-lg" :src="image" alt="image of the portfolio template" />
+    <a class="flex-1 flex justify-center items-center">
+      <img
+        class="rounded-t-lg"
+        :src="image"
+        style="height: 250px"
+        alt="image of the portfolio template"
+      />
     </a>
     <div class="p-5 flex-1 flex flex-col justify-between">
       <div>

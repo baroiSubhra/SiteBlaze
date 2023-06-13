@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main class="main" v-if="data.show">
     <div class="home mt-16" id="home">
       <div class="home-left" :class="{ 'col-span-full text-center': !data.image.show }">
         <h4 class="color-primary mb-4" v-if="data.topHeading.show">{{ data.topHeading.value }}</h4>

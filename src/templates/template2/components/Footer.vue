@@ -89,6 +89,7 @@ export default {
   color: var(--secondary-color);
   margin-bottom: 0.5rem;
   font-weight: 500;
+  word-break: break-word;
 }
 .footer__link:hover {
   color: var(--primary-color);

@@ -1,5 +1,5 @@
 import TemplateImage1 from '@/assets/images/meetup-3.jpg'
-import TemplateImage2 from '@/assets/images/restaurant.jpg'
+import TemplateImage2 from '@/assets/images/restaurant.png'
 export const templateDetails = [
   {
     tid: 1,
@@ -301,7 +301,7 @@ export const templateDetails = [
               },
               {
                 link: '#',
-                value: 'theadvertisementagency.com@gmail.com'
+                value: 'toofar.com@gmail.com'
               }
             ]
           }
@@ -319,10 +319,10 @@ export const templateDetails = [
   },
   {
     tid: 2,
-    name: 'Michlen Star Restaurant',
-    title: 'Michlen Star Restaurant Website',
+    name: 'Michelin Star Restaurant',
+    title: 'Michelin Star Restaurant Website',
     details:
-      'A Michlen star restaurant website with dedicated blog and projects section and an amazing footer',
+      'A Michelin star restaurant website with dedicated blog and projects section and an amazing footer',
     img: TemplateImage2,
     templateLink: '/portfolio-templates/template-2',
     leftButtonAction: () => {
@@ -334,7 +334,7 @@ export const templateDetails = [
         brandName: {
           type: 'text',
           show: true,
-          value: 'AmazonTube'
+          value: 'Restaurantly'
         },
         heroSection: {
           type: 'text',
@@ -371,18 +371,18 @@ export const templateDetails = [
         topHeading: {
           type: 'text',
           show: true,
-          value: 'Award winning Company'
+          value: 'Award winning Restaurant'
         },
         title: {
           type: 'text',
           show: true,
-          value: 'Organise Your Next Meet Without Any Hastle.'
+          value: 'Experience the Finest Cuisine With Restaurantly'
         },
         deatils: {
           type: 'text',
           show: true,
           value:
-            'We specialize in organizing inperson as well as hybrid events, connect with us and we will help you find speakers and connect with sponsors.'
+            'Indulge in a culinary journey like no other at Restaurantly. Our restaurant offers a delightful combination of exquisite flavors, impeccable service, and an enchanting ambiance that will leave you craving for more.'
         },
         ctaButton: {
           type: 'text',
@@ -392,7 +392,7 @@ export const templateDetails = [
         image: {
           type: 'url',
           show: true,
-          value: TemplateImage1
+          value: TemplateImage2
         }
       },
       projectSection: {
@@ -400,18 +400,18 @@ export const templateDetails = [
         topHeading: {
           type: 'text',
           show: true,
-          value: 'What all did we do'
+          value: 'What all do we do'
         },
         title: {
           type: 'text',
           show: true,
-          value: 'Here We Present to you our Flagship Projects'
+          value: 'Exquisite Services'
         },
         deatils: {
           type: 'text',
           show: true,
           value:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'
+            "we specialize in creating unforgettable moments beyond the walls of our restaurant,Whether it's a wedding, corporate function, or social soirée, let us bring the flavors of Restaurantly to your next event."
         },
         ctaButton: {
           type: 'text',
@@ -424,18 +424,18 @@ export const templateDetails = [
         topHeading: {
           type: 'text',
           show: true,
-          value: 'Who are we'
+          value: 'Our Story'
         },
         title: {
           type: 'text',
           show: true,
-          value: '#1 Event Management Company in the World.'
+          value: 'A Legacy of Culinary Excellence.'
         },
         deatils: {
           type: 'text',
           show: true,
           value:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'
+            'we take immense pride in our rich culinary heritage that spans over decades. Our journey began with a vision to provide an exceptional dining experience to our guests, showcasing the flavors and traditions of our region.'
         },
         ctaButton: {
           type: 'text',
@@ -445,7 +445,7 @@ export const templateDetails = [
         image: {
           type: 'url',
           show: true,
-          value: TemplateImage1
+          value: TemplateImage2
         }
       },
       missionSection: {
@@ -458,13 +458,13 @@ export const templateDetails = [
         title: {
           type: 'text',
           show: true,
-          value: 'Ensure Each Meetup is Smooth and HassleFree'
+          value: 'Creating Unforgettable Culinary Experiences'
         },
         deatils: {
           type: 'text',
           show: true,
           value:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'
+            'Our mission is to create unforgettable culinary experiences that delight the senses and leave a lasting impression on our guests. We strive to be a beacon of excellence in the culinary world, showcasing the finest ingredients, innovative techniques, and impeccable service.'
         },
         ctaButton: {
           type: 'text',
@@ -474,7 +474,7 @@ export const templateDetails = [
         image: {
           type: 'url',
           show: true,
-          value: TemplateImage1
+          value: TemplateImage2
         }
       },
       blogSection: {
@@ -482,8 +482,38 @@ export const templateDetails = [
         title: {
           type: 'text',
           show: true,
-          value:
-            'Here are some of our interesting blogs which can help you in organizing your next event.'
+          value: 'Culinary Chronicles - Discover the Latest Food Trends'
+        }
+      },
+      ctaSection: {
+        show: true,
+        title: {
+          type: 'text',
+          show: true,
+          value: 'Contact Us'
+        },
+        input1: {
+          type: 'text',
+          show: true,
+          value: 'Enter Email.',
+          placeholder: 'Enter Your Email'
+        },
+        input2: {
+          type: 'text',
+          show: true,
+          value: 'Enter Phone No.',
+          placeholder: 'Enter Your Phone No'
+        },
+        input3: {
+          type: 'text',
+          show: true,
+          value: 'Enter Querry',
+          placeholder: 'Enter Your Querry'
+        },
+        ctaButton: {
+          type: 'text',
+          show: true,
+          value: 'Submit Querry'
         }
       },
       footer: {
@@ -493,12 +523,12 @@ export const templateDetails = [
           brandName: {
             type: 'text',
             show: true,
-            value: 'Toofar'
+            value: 'Restaurantly'
           },
           brandDetails: {
             type: 'text',
             show: true,
-            value: 'An Event Management Company'
+            value: 'A Michelin Star Restaurant'
           }
         },
         footerSection2: {
@@ -514,15 +544,15 @@ export const templateDetails = [
             value: [
               {
                 link: '#',
-                value: 'Event Management'
+                value: 'Dine in'
               },
               {
                 link: '#',
-                value: 'Marketing'
+                value: 'Take Away'
               },
               {
                 link: '#',
-                value: 'Advertisement'
+                value: 'Catering'
               },
               {
                 link: '#',
@@ -586,7 +616,7 @@ export const templateDetails = [
               },
               {
                 link: '#',
-                value: 'theadvertisementagency.com@gmail.com'
+                value: 'restaurantly@gmail.com'
               }
             ]
           }
@@ -596,7 +626,7 @@ export const templateDetails = [
           copyRightBrand: {
             type: 'text',
             show: true,
-            value: 'AmazonTube'
+            value: 'Restaurantly'
           }
         }
       }

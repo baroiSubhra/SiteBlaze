@@ -1,5 +1,5 @@
 <template>
-  <section class="center template-section" id="about">
+  <section class="center template-section" id="about" v-if="data.show">
     <div class="home">
       <div class="home-left">
         <img :src="data.image.value" :alt="data.topHeading.value" />

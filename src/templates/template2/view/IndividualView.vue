@@ -5,7 +5,7 @@
     </div>
   </template>
   <template v-else>
-    <Nav :data="templateData.navigation" />P
+    <Nav :data="templateData.navigation" />
 
     <div class="container vh100">
       <section class="template-section individual-blog" id="blog">
@@ -57,6 +57,7 @@ import AboutUsCards from '../components/Cards.vue'
 import Button from '../components/Button.vue'
 import Spinner from '../../../components/Spinner.vue'
 import { templateDetails } from '@/utils/templateUtil'
+import { CONTENT_TYPE_ENUM } from '@/utils/constants'
 
 const tid = 1
 
@@ -75,7 +76,7 @@ export default {
       docId: this.$route.params.doc,
       loadingPostData: true,
       postData: {},
-      isBlog: true
+      isBlog: this.$route.meta.contentType == CONTENT_TYPE_ENUM.BLOG
     }
   },
   components: {
@@ -112,6 +113,8 @@ export default {
   },
   mounted() {
     this.intialize()
+    document.body.scrollTop = 0 // For Safari
+    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
   }
 }
 </script>

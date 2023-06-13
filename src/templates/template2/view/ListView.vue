@@ -10,7 +10,13 @@
       <section class="template-section individual-blog" id="blog">
         <div class="mt-4">
           <div>
-            <h1>Our Regular Updated Blog Posts</h1>
+            <h1>
+              {{
+                isBlog
+                  ? templateData.blogSection.title.value
+                  : templateData.projectSection.title.value
+              }}
+            </h1>
           </div>
           <div>
             <template v-if="isTemplate">
@@ -54,6 +60,7 @@ import AboutUsCards from '../components/Cards.vue'
 import Button from '../components/Button.vue'
 import Spinner from '../../../components/Spinner.vue'
 import { templateDetails } from '@/utils/templateUtil'
+import { CONTENT_TYPE_ENUM, STATUS_ENUM } from '@/utils/constants'
 
 const tid = 1
 
@@ -72,7 +79,7 @@ export default {
       loadingListData: true,
       listData: [],
       pageNo: 1,
-      isBlog: true,
+      isBlog: this.$route.meta.contentType == CONTENT_TYPE_ENUM.BLOG,
       totalPages: 3
     }
   },
@@ -88,9 +95,9 @@ export default {
       this.loadingListData = true
       let resp
       if (this.isBlog) {
-        resp = await getBlogs(null, this.pageNo)
+        resp = await getBlogs(STATUS_ENUM.ONLINE, this.pageNo)
       } else {
-        resp = await getProjects(null, this.pageNo)
+        resp = await getProjects(STATUS_ENUM.ONLINE, this.pageNo)
       }
       if (resp.success) {
         this.listData.push(...resp.data.documents)
@@ -116,6 +123,8 @@ export default {
   },
   mounted() {
     this.intialize()
+    document.body.scrollTop = 0 // For Safari
+    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
   }
 }
 </script>

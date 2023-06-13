@@ -4,7 +4,7 @@
   --illustration-width: 500px;
   --logo-width: 260px;
   --title-font-size: 4rem;
-  --primary-color: #e56f57;
+  --primary-color: #069C54;
   --secondary-color: #868686;
   --secondary-color-light: #8686863d;
   --text-black: #393939;
@@ -41,7 +41,7 @@ body:has(.dark-theme) {
   --illustration-width: 500px;
   --logo-width: 260px;
   --title-font-size: 4rem;
-  --primary-color: #e56f57;
+  --primary-color: #069C54;
   --secondary-color: #ddd0d0;
   --secondary-color-light: #ddd0d0;
   --text-black: white;
@@ -140,6 +140,11 @@ h5 {
   font-weight: 600;
 }
 
+.lbl {
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .home,
 .about-top {
   display: grid;
@@ -211,6 +216,22 @@ h5 {
   min-height: 100vh;
 }
 
+.inpt {
+  display: block;
+  padding: 0.625rem;
+  background-color: #f9fafb;
+  color: #111827;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: #d1d5db;
+}
+
+.inpt:focus {
+  outline: none;
+  outline: var(--primary-color);
+}
+
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 1024px) {
   .container {
@@ -236,6 +257,12 @@ h5 {
 
   .about-bottom {
     grid-template-areas: '1';
+  }
+}
+@media (min-width: 640px) {
+  .inpt {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 

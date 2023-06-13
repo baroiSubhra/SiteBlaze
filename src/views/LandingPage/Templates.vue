@@ -4,7 +4,7 @@
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6"
     >
       <img
-        class="w-full rounded bx-shadow max-md:order-last"
+        class="w-full rounded bx-shadow max-md:order-last dark:shadow-white"
         src="@/assets/images/templates.png"
         alt="dashboard image"
       />
