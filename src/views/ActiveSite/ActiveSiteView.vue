@@ -24,6 +24,21 @@
         </template>
         <template v-else> <Template1 :pageData="pageContent" /></template>
       </template>
+      <template v-if="tid == 2">
+        <template
+          v-if="$route.name == 'blogs-portfolio-view' || $route.name == 'projects-portfolio-view'"
+        >
+          <Template2ListView :pageData="pageContent" />
+        </template>
+        <template
+          v-else-if="
+            $route.name == 'blog-portfolio-view' || $route.name == 'project-portfolio-view'
+          "
+        >
+          <Template2IndividualView :pageData="pageContent" />
+        </template>
+        <template v-else> <Template2 :pageData="pageContent" /></template>
+      </template>
     </template>
   </template>
 </template>
@@ -41,6 +56,13 @@ export default {
     ),
     Template1IndividualView: defineAsyncComponent(() =>
       import('@/templates/template1/view/IndividualView.vue')
+    ),
+    Template2: defineAsyncComponent(() => import('@/templates/template2/view/Page.vue')),
+    Template2ListView: defineAsyncComponent(() =>
+      import('@/templates/template2/view/ListView.vue')
+    ),
+    Template2IndividualView: defineAsyncComponent(() =>
+      import('@/templates/template2/view/IndividualView.vue')
     )
   },
   data() {

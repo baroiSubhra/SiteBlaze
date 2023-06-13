@@ -282,7 +282,7 @@ const router = createRouter({
         {
           path: 'blogs',
           name: 'blogs-template-2',
-          component: () => import('../templates/template1/view/ListView.vue'),
+          component: () => import('../templates/template2/view/ListView.vue'),
           meta: {
             noOfPopsToBasePath: 1,
             contentType: CONTENT_TYPE_ENUM.BLOG
@@ -291,7 +291,7 @@ const router = createRouter({
         {
           path: 'blogs/:doc',
           name: 'blog-template-2',
-          component: () => import('../templates/template1/view/IndividualView.vue'),
+          component: () => import('../templates/template2/view/IndividualView.vue'),
           meta: {
             noOfPopsToBasePath: 2,
             contentType: CONTENT_TYPE_ENUM.BLOG
@@ -300,7 +300,7 @@ const router = createRouter({
         {
           path: 'projects',
           name: 'projects-template-2',
-          component: () => import('../templates/template1/view/ListView.vue'),
+          component: () => import('../templates/template2/view/ListView.vue'),
           meta: {
             noOfPopsToBasePath: 1,
             contentType: CONTENT_TYPE_ENUM.PROJECT
@@ -309,7 +309,7 @@ const router = createRouter({
         {
           path: 'projects/:doc',
           name: 'project-template-2',
-          component: () => import('../templates/template1/view/IndividualView.vue'),
+          component: () => import('../templates/template2/view/IndividualView.vue'),
           meta: {
             noOfPopsToBasePath: 2,
             contentType: CONTENT_TYPE_ENUM.PROJECT

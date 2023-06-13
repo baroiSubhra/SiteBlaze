@@ -94,6 +94,7 @@ export default {
       this.routeToPage('/dashboard')
     },
     showModal(tid) {
+      console.log(tid)
       this.selectedTid = tid
       this.modalText = this.NEW_PORTFOLIO_ADD_TEXT
       this.modalAffirmText = 'Yes'
@@ -115,7 +116,7 @@ export default {
       openModal(this.modalId)
     },
     generatePayload(tid) {
-      let content = templateDetails.find((el) => el.tid).content
+      let content = templateDetails.find((el) => el.tid == tid).content
       content = JSON.stringify(content)
       return {
         tid,
