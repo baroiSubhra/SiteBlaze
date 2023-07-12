@@ -1,6 +1,6 @@
 <template>
   <section class="p-4 md:ml-64 h-auto pt-20 min-h-screen">
-    <div v-if="loading" class="w-full h-full flex">
+    <div v-if="loading" class="w-full h-full flex justify-center items-center">
       <SpinnerVue />
     </div>
     <div class="rounded-lg mb-4" v-else>

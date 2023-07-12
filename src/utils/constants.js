@@ -7,6 +7,7 @@ export const CHANGE_PASSWORD = 'change-password'
 export const ALL_PORTFOLIO = 'all-portfolio'
 export const ACTIVE_PORTFOLIO = 'active-portfolio'
 export const CTA = 'cta'
+export const PROJECT_CONTENT_ADD = 'projects-add'
 export const ROUTE_MAP = new Map([
   [TEMPLATE, '/dashboard/templates'],
   [SETTINGS, '/dashboard/settings'],

@@ -2,8 +2,8 @@
   <section class="p-0 min-h-screen">
     <div class="grid grid-cols-6 bg-white md:mt-0 xl:p-0 dark:bg-gray-800">
       <div class="col-span-full lg:col-start-2 lg:col-span-4 pb-4">
-        <h1 class="pb-1">{{ title }}</h1>
-        <h4 class="pb-4">{{ abstract }}</h4>
+        <h1 class="pb-1 text-xl font-bold">{{ title }}</h1>
+        <h4 class="pb-4 text-md font-medium">{{ abstract }}</h4>
         <div v-html="content"></div>
       </div>
       <div class="col-span-full lg:col-start-2 lg:col-span-4 flex justify-between pb-4">

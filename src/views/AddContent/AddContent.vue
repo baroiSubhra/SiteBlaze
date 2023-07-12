@@ -7,7 +7,7 @@
             <h1
               class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center"
             >
-              Please Enter Project Details
+              Please Enter {{ isProject ? 'Project' : 'Blog' }} Details
             </h1>
             <div class="space-y-4 md:space-y-6">
               <div>
@@ -17,7 +17,7 @@
                 <label
                   for="project-title"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >Project Title</label
+                  >{{ isProject ? 'Project' : 'Blog' }} Title</label
                 >
                 <input
                   type="text"
@@ -32,7 +32,7 @@
                 <label
                   for="project-abstract"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >Project Abstract</label
+                  >{{ isProject ? 'Project' : 'Blog' }} Abstract</label
                 >
                 <textarea
                   name="project-abstract"
@@ -50,7 +50,7 @@
           <label
             for="project-details"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Project Content</label
+            >{{ isProject ? 'Project' : 'Blog' }} Content</label
           >
           <Editor v-model="content" />
         </div>
@@ -170,6 +170,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { PROJECT_CONTENT_ADD } from '@/utils/constants'
 import Card from '@/components/CmsCard.vue'
 import Editor from '@/components/Editor/Editor.vue'
 import Preview from './ContentPreview.vue'
@@ -189,7 +190,8 @@ export default {
       img: '',
       title: '',
       abstract: '',
-      content: ''
+      content: '',
+      isProject: this.$route.name == PROJECT_CONTENT_ADD
     }
   },
   computed: {

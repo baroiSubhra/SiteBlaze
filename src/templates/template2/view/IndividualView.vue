@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import '../assets/style.css'
 import { getBlog, getProject } from '@/api/apis'
 import Nav from '../components/Nav.vue'
 import Footer from '../components/Footer.vue'

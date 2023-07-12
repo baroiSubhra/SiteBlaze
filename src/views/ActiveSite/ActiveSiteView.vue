@@ -6,7 +6,9 @@
   </template>
   <template v-else>
     <template v-if="dataLoadFailed">
-      <div>We couldn't load the data</div>
+      <div class="w-screen h-screen flex justify-center items-center text-xl font-bold">
+        We couldn't load the data
+      </div>
     </template>
     <template v-else>
       <template v-if="tid == 1">
